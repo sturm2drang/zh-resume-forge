@@ -8,28 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    /* Enterprise-grade color palette */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 6%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 47% 6%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 222 47% 6%;
 
-    --primary: 222 47% 11%;
+    /* Primary: Deep Navy/Charcoal - Enterprise Security */
+    --primary: 222 47% 6%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 215 28% 17%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary: Electric Blue - AI/Intelligence */
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
+    /* Accent: Electric Blue */
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --accent-cyan: 199 89% 48%;
+    /* Success: Emerald Green - Fact-Locked & ATS Pass */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -38,14 +44,18 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 217 91% 60%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
+    /* Enterprise shadows */
     --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.05);
-    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.07);
-    --shadow-large: 0 10px 25px -5px rgb(0 0 0 / 0.08);
+    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    --shadow-enterprise: 0 10px 40px -10px rgb(15 23 42 / 0.15);
 
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(199 89% 48%));
-    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%), hsl(210 20% 96%));
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 40% 98%), hsl(210 40% 96%));
+    --gradient-grid: repeating-linear-gradient(0deg, hsl(214 32% 91% / 0.3) 0px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, hsl(214 32% 91% / 0.3) 0px, transparent 1px, transparent 40px);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -58,9 +68,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", Arial, sans-serif;
+    font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", Arial, sans-serif;
     font-feature-settings: "kern" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .grid-pattern {
+    background-image: var(--gradient-grid);
   }
 }
