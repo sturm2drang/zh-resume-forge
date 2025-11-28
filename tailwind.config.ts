@@ -38,7 +38,10 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          cyan: "hsl(var(--accent-cyan))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -53,6 +56,7 @@ export default {
         soft: "var(--shadow-soft)",
         medium: "var(--shadow-medium)",
         large: "var(--shadow-large)",
+        enterprise: "var(--shadow-enterprise)",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
